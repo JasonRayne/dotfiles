@@ -3,7 +3,7 @@
 
 sudo apt install <<EOF
 {{ range .packages.linux.apts -}}
-apt {{ . | quote }}
+{{ . | quote }}
 {{ end -}}
 EOF
 {{ end -}}
