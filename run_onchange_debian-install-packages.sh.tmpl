@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+sudo apt install --no-lock --file=/dev/stdin <<EOF
+{{ range .packages.linux.apts -}}
+apt {{ . | quote }}
+{{ end -}}
+EOF
+{{ end -}}
