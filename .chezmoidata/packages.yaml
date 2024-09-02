@@ -2,3 +2,4 @@ packages:
   linux:
     apts:
     - 'bat'
+    - 'fzf'
